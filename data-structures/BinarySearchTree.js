@@ -19,7 +19,7 @@ class BinarySearchTree {
       return this;
     } else {
       let current = this.root;
-
+//While loop looks though the tree, to determine where to insert. Breaks loop on ("return this").
       while (true) {
         if (val === current.val) return undefined;
 //If the value of the new Node is less than the value of the Root, it will go to the left side of the tree.
@@ -30,6 +30,7 @@ class BinarySearchTree {
           } else {
             current = current.left;
           }
+//If the value of the new Node is greater than the value of the Root, it will go to the right side of the tree.
         } else if (val > current.val) {
           if (current.right === null) {
             current.right = newNode;

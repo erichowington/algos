@@ -10,10 +10,10 @@ class BinarySearchTree {
   constructor() {
     this.root = null;
   }
-
+//Inserting new Nodes into tree.
   insert(val) {
     const newNode = new Node(val);
-
+//If there is no Root, then the New Node is the root.
     if (!this.root) {
       this.root = newNode;
       return this;
@@ -22,7 +22,7 @@ class BinarySearchTree {
 
       while (true) {
         if (val === current.val) return undefined;
-
+//If the value of the new Node is less than the value of the Root, it will go to the left side of the tree.
         if (val < current.val) {
           if (current.left === null) {
             current.left = newNode;

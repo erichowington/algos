@@ -16,7 +16,6 @@ function balancedBrackets(str) {
   let x = [];
   return (
     str 
-    //str.split(""): This splits the input string into an array of individual characters.
       .split("")
       .every((i) =>
         "([{".includes(i) ? x.push(i) : "() {} []".includes(x.pop() + i)
